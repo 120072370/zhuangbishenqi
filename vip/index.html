@@ -1,0 +1,352 @@
+﻿<!DOCTYPE html>
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>全网VIP视频在线解析 - 老鱼影视</title>
+    <meta name="keywords" content="付费视频解析，vip视频解析，优酷vip解析，爱奇艺vip解析，腾讯vip解析，乐视vip解析，芒果vip解析，视频解析">
+    <meta name="description" content="本站为广大网友免费提供vip解析，vip视频解析，优酷vip解析，爱奇艺vip解析，腾讯vip解析，乐视vip解析，芒果vip解析服务，让你省去购买视频vip费用！，付费视频解析">
+    <link href="vipmianfei/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href='vipmianfei/styles.css' rel='stylesheet' type='text/css'>
+    
+    <head>
+      <link rel="shortcut icon" href="/favicon.ico" /></head>
+    <script>(function() {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+          bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+          bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+      })();</script>
+    <script type="text/javascript">function SetHome(obj, url) {
+        try {
+          obj.style.behavior = 'url(#default#homepage)';
+          obj.setHomePage(url);
+        } catch(e) {
+          if (window.netscape) {
+            try {
+              netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+            } catch(e) {
+              alert("抱歉，此操作被浏览器拒绝！\n\n请在浏览器地址栏输入“about:config”并敲回车然后将[signed.applets.codebase_principal_support]设置为'true'");
+            }
+          } else {
+            alert("抱歉，您所使用的浏览器无法完成此操作。\n\n您需要手动将【" + url + "】设置为首页。");
+          }
+        }
+      }
+      function AddFavorite(title, url) {
+        try {
+          window.external.addFavorite(url, title);
+        } catch(e) {
+          try {
+            window.sidebar.addPanel(title, url, "");
+          } catch(e) {
+            alert("抱歉，您所使用的浏览器无法完成此操作。\n\n加入收藏失败，请使用Ctrl+D进行添加");
+          }
+        }
+      }</script>
+    <style>.support img{width:120px;height:40px;}.support div{margin-bottom:10px;}</style>
+    <script src="vipmianfei/jquery/1.11.3/jquery.min.js"></script>
+    <script src="vipmianfei/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </head>
+  
+  <body style="padding-bottom: 0;">
+    <div class="topbar">
+      <div class="container">
+        <div class="logo">
+          <a href="" target="_self">
+            <img src="vipmianfei/img/logo.png"></a>
+        </div>
+        <div class="txt">免费影视VIP视频解析！</div>
+        <script>new srcMarquee("ScrollMe", 0, 1, 808, 40, 40, 4200, 4200, 40)</script></div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12" style="height: 60px;">
+          <div style="border-radius: 0;" class="alert alert-warning" role="alert">
+            <p style="text-align: center;">本站将持久更新最新可用解析接口，保证可用性！请持续关注... 若播放异常，请更换接口尝试即可！<a href="http://www.appbsl.com/index.php?ctl=app_download&code=qbS8hqO8tLTcxNTY3LS0wA%3D%3D" rel="nofollow">APP下载</a></p></div>
+        </div>
+        <form method="get">
+          <div class="col-md-3" style="margin-top: 8px;">
+            <div class="input-group" style="width: 100%;">
+              <select id="select-area" class="form-control input-lg" name="othernice">
+                <option value="1" selected="selected">全网通用接口1</option>
+                <option value="2">全网通用接口2</option>
+                <option value="3">全网通用接口3</option>
+                <option value="4">全网通用接口4</option>
+                <option value="5">全网通用接口5</option>
+                <option value="6">通用vip接口6</option>
+                <option value="7">通用vip接口7</option>
+                <option value="8">通用vip接口8</option>
+                <option value="9">通用vip接口9</option>
+                <option value="10">通用vip接口10</option>
+                <option value="11">通用vip接口11</option>
+                <option value="12">通用vip接口12</option>
+                <option value="13">通用vip接口13</option>
+                <option value="14">通用vip接口14</option>
+                <option value="15">通用vip接口15</option>
+                <option value="16">通用vip接口16</option>
+                <option value="17">磁力链接解析</option></select>
+            </div>
+          </div>
+          <div class="col-md-7" style="margin-top: 8px;">
+            <div class="input-group" style="width: 100%;">
+              <input id="play-url" class="form-control input-lg" type="text" name="url" placeholder="输入vip视频播放地址，如：http://v.youku.com/v_show/id_XMTU1OTAwMDU2MA==.html"></div>
+          </div>
+          <div class="col-md-2" style="margin-top: 8px;">
+            <button style="border-radius:0;" id="play-video-btn" type="submit" class="btn btn-success btn-lg btn-block">立即播放</button></div>
+        </form>
+        <div class="col-md-12 warn-info" style="display: none;">
+          <div style="border-radius: 0;" class="alert alert-success" role="alert">填写地址 -> 立即播放 -> 视频播放按钮</div></div>
+      </div>
+      <div class="row" style="margin-top: 16px;">
+        <div class="col-md-12">
+          <iframe width="100%" id="play_iframe" height="600px" allowtransparency="true" frameborder="0" scrolling="no" src="#"></iframe>
+        </div>
+      </div>
+      <div class="row">
+        <div class="tips">
+          <div class="col-md-12">
+            <div style="border-radius: 0;" class="alert alert-success" role="alert">
+              <p style="text-align: center;">本站视频源于互联网视频网站，系互联网抓取所得，仅供学习交流，请勿商用。已支持以下网站视频播放(包含VIP电影)</p></div>
+          </div>
+          <br>
+          <div class="logos_lists">
+            <dl>
+              <dt>
+                <a target="_blank" href="http://www.le.com/">
+                  <img src="vipmianfei/img/letvlogo.png"></a>
+              </dt>
+              <dd>乐视TV视频</dd></dl>
+            <dl>
+              <dt>
+                <a target="_blank" href="http://v.qq.com/">
+                  <img src="vipmianfei/img/qqlogo.png" width="150" height="35"></a>
+              </dt>
+              <dd>腾讯视频</dd></dl>
+            <dl>
+              <dt>
+                <a target="_blank" href="http://www.iqiyi.com/">
+                  <img src="vipmianfei/img/iqiyi.png" width="110" height="35"></a>
+              </dt>
+              <dd>爱奇艺视频</dd></dl>
+            <dl>
+              <dt>
+                <a target="_blank" href="http://www.youku.com/">
+                  <img src="vipmianfei/img/youkulogo.png"></a>
+              </dt>
+              <dd>优酷视频</dd></dl>
+            <dl>
+              <dt>
+                <a target="_blank" href="http://www.tudou.com/">
+                  <img src="vipmianfei/img/tudoulogo.png"></a>
+              </dt>
+              <dd>土豆视频</dd></dl>
+            <dl>
+              <dt>
+                <a target="_blank" href="http://www.mgtv.com/">
+                  <img src="vipmianfei/img/hunantvlogo.png"></a>
+              </dt>
+              <dd>芒果TV视频</dd></dl>
+            <dl>
+              <dt>
+                <a target="_blank" href="http://tv.sohu.com/">
+                  <img src="vipmianfei/img/sohulogo.png"></a>
+              </dt>
+              <dd>搜狐视频</dd></dl>
+            <dl>
+              <dt>
+                <img src="vipmianfei/img/ykcloud.png" width="110" height="35"></dt>
+              <dd>优酷云C</dd></dl>
+            <dl>
+              <dt>
+                <a target="_blank" href="http://www.acfun.tv/">
+                  <img src="vipmianfei/img/acfun.png" width="110" height="35"></a>
+              </dt>
+              <dd>Ac弹幕网</dd></dl>
+            <dl>
+              <dt>
+                <a target="_blank" href="http://www.bilibili.com/">
+                  <img src="vipmianfei/img/bilibili.png" width="110" height="35"></a>
+              </dt>
+              <dd>哔哩哔哩</dd></dl>
+            <dl>
+              <dt>
+                <a target="_blank" href="http://www.fun.tv/">
+                  <img src="vipmianfei/img/fengxing.gif" width="110" height="35"></a>
+              </dt>
+              <dd>风行网</dd></dl>
+            <dl>
+              <dt>
+                <a target="_blank" href="http://www.wasu.cn/">
+                  <img src="vipmianfei/img/wasulogo.png"></a>
+              </dt>
+              <dd>WASU华数视频</dd></dl>
+            <dl>
+              <dt>
+                <a target="_blank" href="http://www.56.com/">
+                  <img src="vipmianfei/img/56logo.png"></a>
+              </dt>
+              <dd>56</dd></dl>
+            <dl>
+              <dt>
+                <a target="_blank" href="http://www.yinyuetai.com/">
+                  <img src="vipmianfei/img/yinyuetailogo.png"></a>
+              </dt>
+              <dd>音悦台MV</dd></dl>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+<!--PC和WAP自适应版-->
+<div id="SOHUCS" ></div> 
+<script type="text/javascript"> 
+(function(){ 
+var appid = 'cysUyNGaR'; 
+var conf = 'prod_d544f6eeff03c190d7cca2b2460f1bce'; 
+var width = window.innerWidth || document.documentElement.clientWidth; 
+if (width < 960) { 
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+    <br>
+    <div class="copyright">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-sm-12">
+            <br>
+            <span>Copyright © 2017
+              <a href="http://zhuangxiabi.com" rel="nofollow">装逼神器</a>All Rights Reserved.
+              <br></span></div>
+        </div>
+      </div>
+    </div>
+    <script>if ($(window).width() < 768) {
+        var b = $('iframe');
+        var c = $('.warn-info');
+        var d = $('.support');
+        b.height('300px');
+        c.show();
+        d.hide()
+      };
+
+      function a(b) {
+        var c = new RegExp('(^|&)' + b + '=([^&]*)(&|$)', 'i');
+        var d = window.location.search.substr(1).match(c);
+        if (d != null) {
+          return unescape(d[2])
+        };
+        return null
+      } (function() {
+        var b = {
+          '1': "http://vip.jlsprh.com/index.php?url=",
+          '2': 'http://api.wlzhan.com/sudu/?url=',
+          '3': 'http://api.662820.com/xnflv/index.php?url=',
+          '4': 'http://www.kkflv.com/kkflv/index.php?url=',
+          '5': 'http://api.47ks.com/webcloud/?v=',
+          '6': 'http://v.72du.com/api/?url=',
+          '7': 'http://qtzr.net/s/?qt=',
+          '8': 'http://player.gakui.top/?url=',
+          '9': 'http://yyygwz.com/index.php?url=',
+          '10': 'http://www.wmxz.wang/video.php?url=',
+          '11': 'http://www.vipjiexi.com/yun.php?url=',
+          '12': 'http://yun.zihu.tv/play.html?url=',
+          '13': 'http://www.vipjiexi.com/tong.php?url=',
+          '14': 'http://www.yydy8.com/Common/?url=',
+          '15': 'http://2gty.com/apiurl/yun.php?url=',
+          '16': 'http://tong.ck921.com/hai2.php?url=',
+          '17': 'https://apiv.ga/magnet/',
+        };
+        var c = a("othernice");
+        var d = a("url");
+        if (!c) {
+          c = ""
+        };
+        if (!d) {
+          d = ""
+        };
+        c = c.trim();
+        d = d.trim();
+        if (c == '') {
+          c = "http://api.wlzhan.com/sudu/?url="
+        };
+        if (d == '') {
+          d = "http://v.youku.com/v_show/id_XMTI4OTM2OTEwOA==.html"
+        };
+        var e = c + d;
+        $("#play_iframe").attr("src", e);
+        $("#play-video-btn").click(function(h) {
+          h.preventDefault();
+          var j = $("#select-area").val();
+          var k = b[j];
+          var l = $('#play-url').val();
+          var m = /magnet/i;
+          if (j == 8) {
+            if (m.test(l)) {
+              var o = l.split(":");
+              l = o[3]
+            }
+          };
+          var n = k + l;
+          $("#play_iframe").attr("src", n)
+        });
+        $('#select-area').change(function() {
+          var h = $("#select-area").val();
+          var j = $('#play-url');
+          if (h == 8) {
+            j.attr('placeholder', '输入磁力链接地址(magnet...)或者40位码...')
+          } else {
+            j.attr('placeholder', '输入vip视频播放地址，如：http://v.youku.com/v_show/id_XMTU1OTAwMDU2MA==.html')
+          }
+        });
+        var f = window.location.href;
+        var g = /./i;
+        if (!g.test(f)) {
+          window.location.href = 'http://www.zhuangxiabi.com'
+        }
+      })();</script>
+<!-- 弹窗代码 开始 -->
+<script>
+var alertmessage="使用方法：①.复制收费视频播放页地址→②.粘贴到下面地址栏→③.点击立即播放即可免费观看付费视频。QQ群535335006"
+var once_per_session=1
+function get_cookie(Name) {
+  var search = Name + "="
+  var returnvalue = "";
+  if (document.cookie.length > 0) {
+    offset = document.cookie.indexOf(search)
+    if (offset != -1) { // if cookie exists
+      offset += search.length
+      end = document.cookie.indexOf(";", offset);
+      if (end == -1)
+         end = document.cookie.length;
+      returnvalue=unescape(document.cookie.substring(offset, end))
+      }
+   }
+  return returnvalue;
+}
+
+function alertornot(){
+if (get_cookie('alerted')==''){
+loadalert()
+document.cookie="alerted=yes"
+}
+}
+
+function loadalert(){
+alert(alertmessage)
+}
+
+if (once_per_session==0)
+loadalert()
+else
+alertornot()
+</script> 
+<!-- 弹窗代码 结束 -->
+
+  </body>
+
+</html>

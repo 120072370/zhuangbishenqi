@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="http://cdn.amazeui.org/amazeui/2.7.2/css/amazeui.min.css" />
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="app/view/css/live.css" />
+		<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+		<script type="text/javascript" src="http://cdn.amazeui.org/amazeui/2.7.2/js/amazeui.min.js"></script>
+		<script type="text/javascript" src="app/view/js/live.js"></script>
+		<title>老鱼聚合直播-全平台直播整合</title>
+		<meta name="keywords" content="老鱼影音聚合直播">
+<meta name="description" content="全平台聚合直播，老鱼聚合网,热剧快播,最好看的剧情片尽在老鱼影音,高清云影视免费为大家提供最新最全的免费电影，电视剧，综艺，动漫无广告在线云点播，以及电视直播，聚合直播平台，主播直播，美女直播，虎牙直播，斗鱼直播，全民直播，熊猫直播，老鱼星网官方源码开源优化，老鱼影音官方美化优化网站源码">
+	</head>
+	<body>
+		<header class="am-topbar am-topbar-inverse">
+			<h1 class="am-topbar-brand">老鱼全平台直播整合</h1>
+			<button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#doc-topbar-collapse'}">
+	        	<span class="am-sr-only">导航切换</span> 
+	        	<span class="am-icon-bars"></span>
+    		</button>
+			<div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse">
+			    <ul class="am-nav am-nav-pills am-topbar-nav">
+			      <li><a href="?cat=lol">英雄联盟</a></li>
+			      <li><a href="?cat=pubg">绝地求生</a></li>
+			      <li><a href="?cat=fortnite">堡垒之夜</a></li>
+			      <li><a href="?cat=dota2">DOTA2</a></li>
+			      <li><a href="?cat=wzry">王者荣耀</a></li>
+			      <li><a href="?cat=yys">阴阳师</a></li>
+			      <li><a href="?cat=cjzc">刺激战场</a></li>
+			      <li><a href="?cat=lol">荒野行动</a></li>
+			      <li><a href="?cat=dwrg">第五人格</a></li>
+			      <li><a href="?cat=wdsj">我的世界</a></li>
+			      <li class="am-dropdown" data-am-dropdown>
+			        <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+			          更多直播 <span class="am-icon-caret-down"></span>
+			        </a>
+			        <ul class="am-dropdown-content">
+			        	<li><a href="/jhlive/">聚合直播</a></li>
+				        <li class="am-divider"></li>
+				        <li><a href="/">装逼制图</a></li>
+			        </ul>
+			      </li>
+			      <li class="am-dropdown" data-am-dropdown>
+			        <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+			          旗下网站 <span class="am-icon-caret-down"></span>
+			        </a>
+			        <ul class="am-dropdown-content">
+			        	<li><a href="http://laoyu.250ds.cn/">老鱼代刷</a></li>
+				        <li class="am-divider"></li>
+                                        <li><a href="/">装逼制图</a></li>
+				        <li class="am-divider"></li>
+				        <li><a href="http://wpa.qq.com/msgrd?v=3&uin=294029685&site=qq&menu=yes">联系官方</a></li>
+			        </ul>
+			      </li>
+			      <!--搜索框开始-->
+			      <li>
+			      	<div class="form-group search-input" style="float:left;margin-bottom:0px;margin-top:0.8rem;position: relative;">
+		                <input type="text" class="form-control kwd" placeholder="搜索喜欢的主播..." />
+		                <ul class="list-group res-ul"></ul>
+	              	</div>
+			      </li>
+			      <!--搜索框结束-->
+			    </ul>
+		</header>
+		<div class="am-container">
+			<ul class="am-avg-lg-4 am-avg-md-3 am-avg-sm-2 am-thumbnails">
+				<{foreach $arr as $k=>$v}>
+				<li class="live-item">
+					<a href="<{$v['url']}>" target="_blank">
+						<div class="live-img">
+							<img class="pic" src="<{$v['pic']}>" />
+							<div class="cover cover-lay">
+								<div class="cover cover-icon"></div>
+							</div>
+							<p><{$v['title']}></p>
+							<span class="am-badge am-badge-warning am-round plat"><{$v['plat']}></span>
+						</div>
+						<div class="live-info">
+							<i	><img class="am-circle userpic" src="<{$v['userpic']}>"/></i>
+							<span class="name"><{$v['name']}></span>
+							<span style="float: right;"><i class="am-icon-github-alt am-icon-fw"></i><{$v['people']}></span>
+						</div>
+					</a>					
+				</li>
+				<{/foreach}>
+			</ul>
+			<ul class="am-pagination am-pagination-centered page">
+			  <li><a href="?cat=<{$cat}>">1</a></li>
+			  <li><a href="?cat=<{$cat}>&p=2">2</a></li>
+			  <li><a href="?cat=<{$cat}>&p=3">3</a></li>
+			  <li><a href="?cat=<{$cat}>&p=4">4</a></li>
+			  <li><a href="?cat=<{$cat}>&p=5">5</a></li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			var str = window.location.href;
+			num =str.substr(-1,1);
+			$(".page li:eq("+(num-1)+")").addClass('am-active');
+		})
+	</script>
+	<!--百度收录自动推送-->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3af9989fa4e7ea2f53fc291bb5b0d361";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<script language="javascript" type="text/javascript" src="app/view/18759442.js"></script>
+</html>

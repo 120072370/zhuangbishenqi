@@ -1,0 +1,11 @@
+.video_list{
+	width:400px;
+	margin-top:10px;
+}
+
+.top{
+	display:none;
+}body {
+overflow-x:hidden;
+overflow-y:hidden;
+}

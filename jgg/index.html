@@ -1,0 +1,308 @@
+﻿<!-- 写码不易扒源码请留个版权谢谢 -->
+<!-- 写码不易扒源码请留个版权谢谢 -->
+<!-- 写码不易扒源码请留个版权谢谢 -->
+<!-- 老鱼QQ294029685 -->
+<!-- 老鱼QQ294029685 -->
+<!-- 鸣谢QQ761917155 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>朋友圈心形九宫格生成--by老鱼zhuangxiabi.com</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/global.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<script type="text/javascript" src="js/windowOpen.js" ></script>
+		<script>
+			document.addEventListener('touchmove', function(event) { event.preventDefault(); }, false);
+			//以上禁止移动端滑动
+			if (screen.width>800)
+			{
+				<!-- alert(); -->
+			  document.write('<link href="css/pc.css" rel="stylesheet" type="text/css" />');
+			} 
+		</script>
+				<script>//更改模板
+					$(function(){
+					  $(".muban_btn").click(function(){//模板选择触发
+							  $(".muban").click();
+							});
+						$(".muban").change(function(){
+							var muban=$(".video_list");//每个模板盒子
+							$(muban).removeClass("display");
+
+							$(muban).eq(this.value-1).addClass("display");
+							$(".muban_btn span").html("已选择:模板"+this.value);
+						});
+					});
+				</script>
+				<script type="text/javascript">
+					function dele(me){
+					  if($(me).children()==0){
+						  return false;
+						}
+						$(me).children().eq(0).remove();//删除图片
+					}
+					$(function() {
+						var item=$(".item")//所有图片
+						var myVar;
+						$(item).each(function(){//上传图片
+						  $(this).click(function(){
+							  if($("#on")[0].className=="on"){
+								  file(this);
+								}
+								else{
+								  dele(this);
+								}
+							});
+						});
+						$("#on").click(function(){//上传和 删除开关
+						  if(this.className=="on"){
+							  this.className="off"
+								this.value="删除模式--点击图片删除";
+							}
+							else{
+							  this.className="on"
+								this.value="上传模式-点击图片上传";
+							}
+							
+						});
+					});
+
+		</script>
+		<script type="text/javascript" src="js/html2canvas.js"></script><!--引入的截图-->
+		<script  type="text/javascript" >    
+    $(document).ready( function(){    //截图
+			$(".example1").on("click", function(event) {    
+							event.preventDefault();  
+							
+							$(".window-content").append("<div class='tishi' style='text-align:center;'>正在生成中</div>");							
+							$(".video_list").addClass("video_list2");
+							var muban=$(".video_list");//每个模板盒子
+							var index=0;
+							for(var i=0;i<muban.length;i++){
+							  muban[i].index=i;
+							}
+							$(muban).each(function(){
+								if($(this).hasClass("display")){
+								  index=this.index;//记住合成的模板图片下标
+								}
+							});
+							<!-- alert(); -->
+							<!-- exit; -->
+							
+							
+							html2canvas(muban[index], {    
+							allowTaint: true,    
+							taintTest: false,    
+							onrendered: function(canvas) {    
+									canvas.id = "mycanvas";    
+									//document.body.appendChild(canvas);    
+									//生成base64图片数据    
+									var dataUrl = canvas.toDataURL();    
+									$(".video_list").removeClass("video_list2");
+									var newImg = document.createElement("img");   
+									$(newImg).css({width:200,height:200});
+									$(".window-content").css({"textAlign":"center"});
+									newImg.src =  dataUrl;    
+									$(".window-content")[0].appendChild(newImg);
+									$(".tishi").html("生成成功，请长按图片保存");
+							}    
+					});    
+			});     
+    });    
+        </script>  
+    </head>
+    <body>
+			<audio autoplay="autoplay" controls="controls"loop="loop" preload="auto" style="display:none;"
+            	src="music/zouma.mp3">
+      		你的浏览器版本太低，不支持audio标签
+			</audio>
+		  <div class="top">
+			  <marquee>
+					过了很久终于我愿抬头看,你就在对岸走的好慢。
+					过了很久终于我愿抬头看,你就在对岸等我勇敢。    
+				</marquee>
+			</div>
+		  <div class="bigbox">
+				<div class="jietu">
+					<ul class="video_list display">
+						<li><div class="item"></div></li>                    
+						<li><div class="item"></div></li>                
+						<li><div class="item"></div></li>                
+						<li><div class="item"></div></li>                
+						<li><div class="item"></div></li>                
+						<li><div class="item"><img src="img/2.jpg"/></div></li>                
+						<li><div class="item"></div></li>                
+						<li><div class="item"><img src="img/4.jpg"/></div></li>                
+						<li><div class="item"><img src="img/5.jpg"/></div></li>                
+					</ul>
+					<ul class="video_list">
+						<li><div class="item"></div></li>                    
+						<li><div class="item"></div></li>                
+						<li><div class="item"></div></li>                
+						<li><div class="item"><img src="img/1.jpg"/></div></li>                
+						<li><div class="item"></div></li>                
+						<li><div class="item"><img src="img/2.jpg"/></div></li>                
+						<li><div class="item"><img src="img/6.jpg"/></div></li>                
+						<li><div class="item"><img src="img/4.jpg"/></div></li>                
+						<li><div class="item"><img src="img/5.jpg"/></div></li>                
+					</ul>
+					<ul class="video_list">
+						<li><div class="item"></div></li>                    
+						<li><div class="item"></div></li>                
+						<li><div class="item"></div></li>                
+						<li><div class="item"><img src="img/2.jpg"/></div></li>                
+						<li><div class="item"></div></li>                
+						<li><div class="item"></div></li>                
+						<li><div class="item"><img src="img/5.jpg"/></div></li>                
+						<li><div class="item"><img src="img/4.jpg"/></div></li>                
+						<li><div class="item"></div></li>                
+					</ul>
+					<ul class="video_list">         
+						<li><div class="item"><img src="img/1.jpg"/></div></li>                     
+						<li><div class="item"><img src="img/4.jpg"/></div></li>                
+						<li><div class="item"><img src="img/3.jpg"/></div></li>                  
+						<li><div class="item"><img src="img/4.jpg"/></div></li>                
+						<li><div class="item"><img src="img/1.jpg"/></div></li>           
+						<li><div class="item"><img src="img/2.jpg"/></div></li>                
+						<li><div class="item"></div></li>                
+						<li><div class="item"><img src="img/4.jpg"/></div></li>                
+						<li><div class="item"><img src="img/5.jpg"/></div></li>                
+					</ul>
+					<ul class="video_list">
+						<li><div class="item"><img src="img/5.jpg"/></div></li>                     
+						<li><div class="item"><img src="img/4.jpg"/></div></li>                
+						<li><div class="item"><img src="img/1.jpg"/></div></li>                  
+						<li><div class="item"><img src="img/4.jpg"/></div></li>                
+						<li><div class="item"><img src="img/5.jpg"/></div></li>           
+						<li><div class="item"><img src="img/2.jpg"/></div></li>                
+						<li><div class="item"><img src="img/1.jpg"/></div></li>                
+						<li><div class="item"><img src="img/4.jpg"/></div></li>                
+						<li><div class="item"><img src="img/5.jpg"/></div></li>               
+					</ul>
+					<ul class="video_list">
+						<li><div class="item"><img src="img/5.jpg"/></div></li>                     
+						<li><div class="item"><img src="img/4.jpg"/></div></li>                
+						<li><div class="item"><img src="img/5.jpg"/></div></li>                  
+						<li><div class="item"><img src="img/1.jpg"/></div></li>                
+						<li><div class="item"><img src="img/5.jpg"/></div></li>           
+						<li><div class="item"><img src="img/2.jpg"/></div></li>                
+						<li><div class="item"><img src="img/5.jpg"/></div></li>                
+						<li><div class="item"><img src="img/1.jpg"/></div></li>                
+						<li><div class="item"></div></li>               
+					</ul>
+					<ul class="video_list">
+							<li><div class="item"></div></li>                    
+							<li><div class="item"></div></li>                
+							<li><div class="item"><img src="img/2.jpg"/></div></li>                
+							<li><div class="item"></div></li>                
+							<li><div class="item"></div></li>                
+							<li><div class="item"></div></li>                
+							<li><div class="item"></div></li>                
+							<li><div class="item"></div></li>                
+							<li><div class="item"></div></li>                 
+					</ul>
+					<ul class="video_list">
+							<li><div class="item"><img src="img/4.jpg"/></div></li>                
+							<li><div class="item"><img src="img/5.jpg"/></div></li>  
+							<li><div class="item"><img src="img/3.jpg"/></div></li>                
+							<li><div class="item"><img src="img/1.jpg"/></div></li>  
+							<li><div class="item"><img src="img/4.jpg"/></div></li>                						
+							<li><div class="item"><img src="img/6.jpg"/></div></li>                
+							<li><div class="item"></div></li>     
+							<li><div class="item"><img src="img/4.jpg"/></div></li>                
+							<li><div class="item"></div></li>     						
+					</ul>
+					<ul class="video_list">
+							<li><div class="item"><img src="img/4.jpg"/></div></li>                    
+							<li><div class="item"></div></li>                
+							<li><div class="item"></div></li>                
+							<li><div class="item"></div></li>                
+							<li><div class="item"></div></li>                
+							<li><div class="item"></div></li>                
+							<li><div class="item"></div></li>                
+							<li><div class="item"></div></li>                
+							<li><div class="item"></div></li>                
+					</ul>
+					<div id="btnwrap">
+							<p class="fstyle">
+								<input type="file" multiple="multiple" class="file_upload"/>
+							</p>
+							<p><input type="button" id="on" value="上传模式-点击图片上传" class="on"/></p>
+							<p><button class="muban_btn"><span>已选择:模板一</span>
+							  <select class="muban">
+									<option value="1">模板一</option>
+									<option value="2">模板二</option>
+									<option value="3">模板三</option>
+									<option value="4">模板四</option>
+									<option value="5">模板五</option>
+									<option value="6">模板六</option>
+									<option value="7">模板七</option>
+									<option value="8">模板八</option>
+									<option value="9">模板九</option>
+								</select>
+							</button></p>
+			<p><input type="button" class="example1 open-window-title" value="生成图片" /></p>
+			<p>
+				<input type="button" value="更多好玩东西" onclick="window.open('/')">
+			</p>					</div> 
+				</div>
+			</div>
+				<script type="text/javascript"></script>
+        <script>
+				var xzimg=null;//选中的图片
+					function file(me){//上传功能
+						xzimg=me;
+						$(".file_upload").click();
+					}
+		</script>
+ <script>
+	  $(".file_upload").change(function(){
+			var file = this.files[0];
+			if(typeof(file)=="undefined"){
+				return false;
+			}
+			if(window.FileReader) {
+
+					var fr = new FileReader();
+
+					console.log(fr);
+					if($(xzimg).children().length==0){
+						$(xzimg).append("<img/>");
+					}
+					var portrait = $(xzimg).children()[0];
+					
+					fr.onloadend = function(e) {
+
+						portrait.src = e.target.result;
+
+					};
+
+					fr.readAsDataURL(file);
+					$(this).val("");
+			}
+						<!-- }); -->
+		});
+	</script>
+    
+
+<script type="text/javascript">
+	var setTitle = '';
+	var setContents = '';
+	var setButton = '';
+	//网络异常下单失败提示，执行此代码
+	$('.open-window-title').on('click',function(){
+		setTitle = '朋友圈心形九宫格在线生成--by老鱼Qq294029685';
+		<!-- alert($("#tupian").children()[0]); -->
+		<!-- setContents = '<a href="">点击下载</a>'; -->
+		<!-- alert(newImg); -->
+		setButton = '["确定"]';
+		$(this).openWindow(setTitle,setContents,setButton);
+	});
+	
+</script>
+
+    </body>
+</html>
